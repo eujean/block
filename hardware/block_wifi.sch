@@ -1,0 +1,237 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L RF_Module:ESP32-WROOM-32 U9
+U 1 1 5FEFE926
+P 5650 3450
+F 0 "U9" H 5650 5031 50  0000 C CNN
+F 1 "ESP32-WROOM-32" H 5650 4940 50  0000 C CNN
+F 2 "RF_Module:ESP32-WROOM-32" H 5650 1950 50  0001 C CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf" H 5350 3500 50  0001 C CNN
+	1    5650 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR045
+U 1 1 5FF34ACB
+P 5650 1550
+F 0 "#PWR045" H 5650 1400 50  0001 C CNN
+F 1 "+3V3" H 5665 1723 50  0000 C CNN
+F 2 "" H 5650 1550 50  0001 C CNN
+F 3 "" H 5650 1550 50  0001 C CNN
+	1    5650 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R36
+U 1 1 5FF37025
+P 4650 1800
+F 0 "R36" H 4720 1846 50  0000 L CNN
+F 1 "10k" H 4720 1755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4580 1800 50  0001 C CNN
+F 3 "~" H 4650 1800 50  0001 C CNN
+	1    4650 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C29
+U 1 1 5FF37A90
+P 6450 1750
+F 0 "C29" H 6565 1796 50  0000 L CNN
+F 1 "10uF" H 6565 1705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 6488 1600 50  0001 C CNN
+F 3 "~" H 6450 1750 50  0001 C CNN
+	1    6450 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C30
+U 1 1 5FF3884D
+P 6850 1750
+F 0 "C30" H 6965 1796 50  0000 L CNN
+F 1 "0.1uF" H 6965 1705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6888 1600 50  0001 C CNN
+F 3 "~" H 6850 1750 50  0001 C CNN
+	1    6850 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 2050 5650 1600
+Wire Wire Line
+	5650 1600 6450 1600
+Connection ~ 5650 1600
+Wire Wire Line
+	5650 1600 5650 1550
+Wire Wire Line
+	6450 1600 6850 1600
+Connection ~ 6450 1600
+Wire Wire Line
+	6450 1900 6450 1950
+Wire Wire Line
+	6450 1950 6650 1950
+Wire Wire Line
+	6850 1950 6850 1900
+$Comp
+L power:GND #PWR047
+U 1 1 5FF3A762
+P 6650 2000
+F 0 "#PWR047" H 6650 1750 50  0001 C CNN
+F 1 "GND" H 6655 1827 50  0000 C CNN
+F 2 "" H 6650 2000 50  0001 C CNN
+F 3 "" H 6650 2000 50  0001 C CNN
+	1    6650 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 1950 6650 2000
+Connection ~ 6650 1950
+Wire Wire Line
+	6650 1950 6850 1950
+Wire Wire Line
+	5050 2250 4650 2250
+Wire Wire Line
+	4650 2250 4650 1950
+Wire Wire Line
+	4650 1650 4650 1600
+Wire Wire Line
+	4650 1600 5650 1600
+$Comp
+L Device:C C31
+U 1 1 5FF3C98D
+P 4200 2250
+F 0 "C31" V 3948 2250 50  0000 C CNN
+F 1 "1uF" V 4039 2250 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4238 2100 50  0001 C CNN
+F 3 "~" H 4200 2250 50  0001 C CNN
+	1    4200 2250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4650 2250 4350 2250
+Connection ~ 4650 2250
+Wire Wire Line
+	4050 2250 3900 2250
+Wire Wire Line
+	3900 2250 3900 2350
+$Comp
+L power:GND #PWR048
+U 1 1 5FF3D732
+P 3900 2350
+F 0 "#PWR048" H 3900 2100 50  0001 C CNN
+F 1 "GND" H 3905 2177 50  0000 C CNN
+F 2 "" H 3900 2350 50  0001 C CNN
+F 3 "" H 3900 2350 50  0001 C CNN
+	1    3900 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR050
+U 1 1 5FF3E3E6
+P 5650 4900
+F 0 "#PWR050" H 5650 4650 50  0001 C CNN
+F 1 "GND" H 5655 4727 50  0000 C CNN
+F 2 "" H 5650 4900 50  0001 C CNN
+F 3 "" H 5650 4900 50  0001 C CNN
+	1    5650 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 4850 5650 4900
+$Comp
+L Connector:Conn_01x02_Female J2
+U 1 1 5FF449C1
+P 8600 1600
+F 0 "J2" H 8628 1576 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 8628 1485 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8600 1600 50  0001 C CNN
+F 3 "~" H 8600 1600 50  0001 C CNN
+	1    8600 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 1700 8400 1850
+$Comp
+L power:GND #PWR046
+U 1 1 5FF462BC
+P 8400 1850
+F 0 "#PWR046" H 8400 1600 50  0001 C CNN
+F 1 "GND" H 8405 1677 50  0000 C CNN
+F 2 "" H 8400 1850 50  0001 C CNN
+F 3 "" H 8400 1850 50  0001 C CNN
+	1    8400 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J3
+U 1 1 5FF48521
+P 8600 2550
+F 0 "J3" H 8680 2592 50  0000 L CNN
+F 1 "Conn_01x03" H 8680 2501 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 8600 2550 50  0001 C CNN
+F 3 "~" H 8600 2550 50  0001 C CNN
+	1    8600 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 2650 8200 2850
+Wire Wire Line
+	8200 2650 8400 2650
+$Comp
+L power:GND #PWR049
+U 1 1 5FF4A4DD
+P 8200 2850
+F 0 "#PWR049" H 8200 2600 50  0001 C CNN
+F 1 "GND" H 8205 2677 50  0000 C CNN
+F 2 "" H 8200 2850 50  0001 C CNN
+F 3 "" H 8200 2850 50  0001 C CNN
+	1    8200 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 1600 7550 1600
+Wire Wire Line
+	7550 1600 7550 2250
+Wire Wire Line
+	7550 2250 6250 2250
+Wire Wire Line
+	6250 2550 8400 2550
+Wire Wire Line
+	8400 2450 7700 2450
+Wire Wire Line
+	7700 2450 7700 2350
+Wire Wire Line
+	6250 2350 7700 2350
+Text HLabel 6850 2750 2    50   Input ~ 0
+ESP_CS0
+Wire Wire Line
+	6850 2750 6250 2750
+Text Notes 8500 2350 0    50   ~ 0
+UART Download
+Text Notes 8550 1450 0    50   ~ 0
+Boot selection
+Wire Wire Line
+	6250 3450 6850 3450
+Text HLabel 6850 3450 2    50   Input ~ 0
+ESP_SCLK
+Text HLabel 6850 3550 2    50   Input ~ 0
+ESP_MISO
+Text HLabel 6850 3850 2    50   Input ~ 0
+ESP_MOSI
+Wire Wire Line
+	6850 3850 6250 3850
+Wire Wire Line
+	6850 3550 6250 3550
+$EndSCHEMATC
